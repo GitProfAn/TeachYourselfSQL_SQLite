@@ -2,6 +2,9 @@
 -- SQL за 10 минут, 4-е изд.: Пер. с англ.—М.: ООО “И.Д. Вильямс”,
 -- 2014. — 288 с.
 
+-- учебная база данных
+-- https://forta.com/wp-content/uploads/books/0672336073/TeachYourselfSQL_SQLite.zip
+
 -- SQLite
 -- SELECT prod_name FROM Products;
 
@@ -143,4 +146,35 @@
 -- Урок 6
 -- Фильтрация с использованием метасимволов
 
---
+-- Использование оператора LIKE
+-- Метасимвол «знак процента» (%)
+-- SELECT prod_id, prod_name
+-- FROM Products
+-- WHERE prod_name LIKE 'Fish%';
+
+-- SELECT prod_id, prod_name
+-- FROM Products
+-- WHERE prod_name LIKE '%bean bag%';
+
+-- SELECT prod_name
+-- FROM Products
+-- WHERE prod_name LIKE 'F%y';
+
+-- Метасимвол «знак подчеркивания» (_)
+-- SELECT prod_id, prod_name
+-- FROM Products
+-- WHERE prod_name LIKE '__ inch teddy bear';
+
+-- SELECT prod_id, prod_name
+-- FROM Products
+-- WHERE prod_name LIKE '% inch teddy bear';
+
+-- Метасимвол «квадратные скобки» ([]) - не поддерживается в SQLite
+-- SELECT cust_contact
+-- FROM Customers
+-- WHERE cust_contact LIKE '[JM]%'
+-- ORDER BY cust_contact;
+
+-- стр. 73
+-- Урок 7
+-- Создание вычисляемых полей
