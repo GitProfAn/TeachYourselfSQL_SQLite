@@ -178,3 +178,35 @@
 -- стр. 73
 -- Урок 7
 -- Создание вычисляемых полей
+
+-- Конкатенация полей
+-- SELECT vend_name || ' (' || vend_country || ') '
+-- FROM Vendors
+-- ORDER BY vend_name;
+
+-- SELECT RTRIM(vend_name) || ' (' || RTRIM(vend_country) || ') '
+-- FROM Vendors
+-- ORDER BY vend_name;
+
+-- Использование псевдонимов
+-- SELECT RTRIM(vend_name) || ' (' || RTRIM(vend_country) || ') '
+-- AS vend_title
+-- FROM Vendors
+-- ORDER BY vend_name;
+
+-- Выполнение математических вычислений
+-- SELECT prod_id, quantity, item_price
+-- FROM OrderItems
+-- WHERE order_num = 20008;
+
+-- SELECT prod_id,
+-- quantity,
+-- item_price,
+-- quantity*item_price AS expanded_price
+-- FROM OrderItems
+-- WHERE order_num = 20008;
+
+
+-- стр. 83
+-- Урок 8
+-- Испльзование фнекции обработки данных
