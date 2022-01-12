@@ -210,3 +210,26 @@
 -- стр. 83
 -- Урок 8
 -- Испльзование фнекции обработки данных
+
+-- Функции для работы с текстом
+-- SELECT vend_name, UPPER(vend_name) AS vend_name_upcase
+-- FROM Vendors
+-- ORDER BY vend_name;
+
+-- SELECT cust_name, cust_contact
+-- FROM Customers
+-- WHERE cust_contact = 'Michael Green';
+
+-- Поддерживается только в особом режиме
+-- SELECT cust_name, cust_contact
+-- FROM Customers
+-- WHERE SOUNDEX(cust_contact) = SOUNDEX('Michael Green');
+
+-- Функции для работы с датой и временем
+SELECT order_num
+FROM Orders
+WHERE strftime('%Y', order_date) = 2012;
+
+-- стр. 93
+-- Урок 9
+-- Итоговые вычисления
