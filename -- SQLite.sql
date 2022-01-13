@@ -233,3 +233,51 @@ WHERE strftime('%Y', order_date) = 2012;
 -- стр. 93
 -- Урок 9
 -- Итоговые вычисления
+
+-- Функция AVG()
+-- SELECT AVG(prod_price) AS avg_price
+-- FROM Products;
+
+-- SELECT AVG(prod_price) as avg_price
+-- FROM Products
+-- WHERE vend_id = 'DLL01';
+
+-- Функция COUNT()
+-- SELECT COUNT(*) AS num_cust
+-- FROM Customers;
+
+-- SELECT COUNT(cust_email) AS num_cust
+-- FROM Customers;
+
+-- Функция MAX()
+-- SELECT MAX(prod_price) AS max_price
+-- FROM Products;
+
+-- Функция MIN()
+-- SELECT MIN(prod_price) AS min_price
+-- FROM Products;
+
+-- SELECT SUM(quantity) AS item_ordered
+-- FROM OrderItems
+-- WHERE order_num = 20005;
+
+-- SELECT SUM(item_price*quantity) AS total_price
+-- FROM OrderItems
+-- WHERE order_num = 20005;
+
+-- Итоговые вычисления для уникальных значений
+-- SELECT AVG(DISTINCT prod_price) AS avg_price
+-- FROM Products
+-- WHERE vend_id = 'DLL01';
+
+-- Комбинирование итоговых функций
+-- SELECT COUNT(*) AS num_items,
+--     MIN(prod_price) as price_min,
+--     MAX(prod_price) AS price_max,
+--     AVG(prod_price) AS price_avg
+-- FROM Products;
+
+
+-- стр. 105
+-- Урок 10
+-- Группировка данных
